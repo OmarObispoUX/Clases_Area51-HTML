@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Inline BLock</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.inline{
+				color: blue;
+				display: inline;
+
+			}
+			.inline > p {
+				color:blue;
+			}
+			.block > * {
+				color: violet;
+				padding: 5px;
+				display: inline;
+
+			}
+			.inline-block first:child {
+				color: gold;
+			}
+			.inline-block p {
+				color: gold;
+				width: 500vW;
+				height: 200vW;
+
+
+			}
+			.inline-block > * {
+				color:#00BBFF;
+				display: inline-block;
+				margin: 0;
+
+			}
+			.none > *{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="inline">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<input type="text" name="">
+				</div>
+		</div>
+		<div class="block">
+			<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+			<strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</strong>
+		</div>
+		<div class="inline-block">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+		</div>
+		<div class="none">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+		</div>
+	</body>
+</html>
