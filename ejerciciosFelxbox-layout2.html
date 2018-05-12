@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layout 2</title>
+	<style type="text/css">
+		body{
+			font: 120% Arial, sans-serif;
+		}
+		.container{
+			/*	width: 800px;*/
+			width: 100%;
+			height: auto;
+			display: inline-flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			
+
+			background-color: #ccc;
+			
+		}
+		.container > div{
+			/*width: 450px;
+			height: 100px;*/
+			flex-basis: calc(95% / 2);
+			height: auto;
+			margin-bottom: 2%;
+		}
+		.orange{
+			display: flex;
+		}
+		.red {
+		  background-color: #ff7d7d; }
+
+		.orange {
+		  background-color: #ffc158; }
+
+		.yellow {
+		  background-color: yellow; }
+
+		.green {
+		  background-color: #a6eaa6; }
+
+		.blue {
+		  background-color: #94c1ff; }
+
+		.purple {
+		  background-color: #c380c3; }
+			
+		  @media screen and (max-width:728px){
+				.container {
+					width: 100%;
+					display:block;
+				}
+				.container > div{
+					flex-basis:calc(95% / 2);
+				}
+			}
+			@media screen and (max-width:420px){
+				.container {
+					width: 100%;
+					display:block;
+				}
+			}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="red">1</div>
+	<div class="orange">2
+		<div class="orange">2.1</div>
+		<div class="orange">2.2</div>
+	</div>
+	<div class="yellow">3</div>
+	<div class="green">4</div>
+	<div class="blue">5</div>
+	<div class="purple">6</div>
+</div>
+	
+</body>
+</html>
