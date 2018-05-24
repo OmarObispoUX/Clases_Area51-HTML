@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="En">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>jQuery</title>
+	
+</head>
+<body>
+
+	<h1>jQuery</h1>
+<!-- 	<h1>jQuery</h1>
+	<h1>jQuery</h1> -->
+	<ul class="beneficios">
+		<li>Beneficios</li>
+		<li>Selectores para trabajar con el DOM</li>
+		<li>Efectos y animacioneesde elementos HTML</li>
+		<li>Eventos</li>
+		<li>Carga de contenido dinámico (AJAX)</li>
+	</ul>
+
+	<a target="_blank" href="http://jquery.com">Visitar jQuery.com</a>
+
+	<script 
+			type="text/javascript" 
+			src="js/jquery-3.3.1.min.js">	
+	</script>
+	
+	<script type="text/javascript">
+			$(function() {
+				//Selector de elementos
+					var $h1 = $('h1');
+					var h1 = document.getElementsByTagName('h1');
+					var h1qs = document.querySelectorAll('h1');
+
+				//solo para prueba y luego se arma logica
+					//console.log($h1, h1, h1qs);
+
+					//Acceder a los Atributos
+					var $a = $('a');
+					$a.attr('href'); //Solo lectura
+					$a.attr('href', 'http://google.com'); //cambiar el atributo de href
+
+
+					//Para agregar varios atributos
+					$a.attr( {
+						href: 'http://learn.jquery.com',
+						title: 'Aprende mas jQuery'
+					});
+
+					//Eventos
+					$a.click(function(event) {
+							event.preventDefault();
+							console.event(event)
+					});
+
+					$a.mousemove(function(event){
+							console.log(event.screenX); //para ubicar el puntero en cordenadas
+					});
+
+					//Multiples nombre de eventos
+					$a.on('click mousemove mousenter mouseleave', function(event){
+							console.log(event.type);
+					});
+
+					
+			})
+
+		</script>
+
+</body>
+
+</html>

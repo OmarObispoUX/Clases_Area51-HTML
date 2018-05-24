@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="Es">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>jQuery - Ejemplo Ball</title>
+	<style type="text/css">
+		.ball{
+			display: block;
+			height: 160px;
+			width: 160px;
+			background-color: gold;
+			border-radius: 50%;
+			position: fixed;
+		}
+	</style>
+</head>
+
+<body>
+
+	<span class="ball"></span>
+
+	<script 
+			type="text/javascript" 
+			src="js/jquery-3.3.1.min.js">	
+	</script>
+	
+	<script type="text/javascript">
+			$(function() {
+
+				var isDragging = false;
+				var $ball = $('.ball');
+
+					$ball.on('mousedown mouseup', function(event){
+						if (event.type == 'mousedown'){
+								isDragging == true;
+						}
+						else {
+								isDragging == false;
+						}
+				});
+					
+					$(window).mousemove(function(event){
+						if (isDragging == true){
+							$ball.css({
+								top:event.clientY - ($ball.height() / 2),
+								left:event.clientX - ($ball.width() / 2)
+							});
+					}
+
+			});
+
+		</script>
+
+</body>
+
+</html>
